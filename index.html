@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Grid Meme Gen</title>
+</head>
+<body onload="onInit()">
+    <div class="main-screen" onclick="toggleMenu()"></div>
+
+    <div class="main-grid">
+        <header class="main-header">
+            <div class="header-content flex space-between align-center">
+                <div class="logo flex">memeGen</div>
+                <div class="main-nav flex">
+                    <button class="btn-nav" onclick="onShowEditor()">Edit Meme</button>
+                    <button class="btn-nav active" onclick="onShowGallery()">Gallery</button>
+                    <button class="btn-nav" onclick="">About</button>
+                </div>
+                <button class="btn-nav-menu" onclick="toggleMenu()">☰</button>
+            </div>
+        </header>
+        
+        <main class="main-content">
+
+            <div class="gallery-container">
+                <!-- <h2>Photo Gallery</h2> -->
+                <div class="images-wrapper grid">
+                    <div class="image-box"><img src="./images/1.jpg" alt="image1" id="1" onclick="onSelectImg(this.id)"></div>
+                    <div class="image-box"><img src="./images/2.jpg" alt="image2" id="2" onclick="onSelectImg(this.id)"></div>
+                    <div class="image-box"><img src="./images/3.jpg" alt="image1" id="3" onclick="onSelectImg(this.id)"></div>
+                    <div class="image-box"><img src="./images/4.jpg" alt="image2" id="4" onclick="onSelectImg(this.id)"></div>
+                    <div class="image-box"><img src="./images/5.jpg" alt="image1" id="5" onclick="onSelectImg(this.id)"></div>
+                    <div class="image-box"><img src="./images/6.jpg" alt="image2" id="6" onclick="onSelectImg(this.id)"></div>
+                    <div class="image-box"><img src="./images/7.jpg" alt="image1" id="7" onclick="onSelectImg(this.id)"></div>
+                    <div class="image-box"><img src="./images/8.jpg" alt="image2" id="8" onclick="onSelectImg(this.id)"></div>
+                    <div class="image-box"><img src="./images/9.jpg" alt="image1" id="9" onclick="onSelectImg(this.id)"></div>
+                    <div class="image-box"><img src="./images/10.jpg" alt="image2" id="10" onclick="onSelectImg(this.id)"></div>
+                    <div class="image-box"><img src="./images/11.jpg" alt="image1" id="11" onclick="onSelectImg(this.id)"></div>
+                    <div class="image-box"><img src="./images/12.jpg" alt="image2" id="12" onclick="onSelectImg(this.id)"></div>
+                    <div class="image-box"><img src="./images/13.jpg" alt="image2" id="13" onclick="onSelectImg(this.id)"></div>
+                    <div class="image-box"><img src="./images/14.jpg" alt="image1" id="14" onclick="onSelectImg(this.id)"></div>
+                    <div class="image-box"><img src="./images/15.jpg" alt="image2" id="15" onclick="onSelectImg(this.id)"></div>
+                    <div class="image-box"><img src="./images/16.jpg" alt="image2" id="16" onclick="onSelectImg(this.id)"></div>
+                    <div class="image-box"><img src="./images/17.jpg" alt="image1" id="17" onclick="onSelectImg(this.id)"></div>
+                    <div class="image-box"><img src="./images/18.jpg" alt="image1" id="18" onclick="onSelectImg(this.id)"></div>
+                </div>
+            </div>
+
+            <div class="editor-container">
+                <div class="canvas-container">
+                    <canvas id="my-canvas" height="400" width="400"></canvas>
+                </div>
+    
+                <div class="control-panel flex">
+                    <label for="meme-text"></label>
+                    <input type="text" name="meme-text" placeholder="you'r text here" oninput="onType(this.value)">
+                    <button class="font-size" onclick="increaseTxtSize()">+</button>
+                    <button class="font-size" onclick="decreaseTxtSize()">-</button>
+                    <button class="vert-align" onclick="moveLineUp()">⬆️</button>
+                    <button class="vert-align" onclick="moveLineDown()">⬇️</button>
+                    <button class="add-line" onclick="onAddNewLine()">➕</button>
+                    <button class="switch-line" onclick="onSwitchLine()">⇵</button>
+                </div>
+            </div>
+
+        </main>
+
+
+        <footer class="main-footer">
+            <div class="footer-container">
+                <div class="logo">memeGen</div>
+                <small>© 2021 memeGen - aFendell</small>
+                <ul class="social-nav flex clean-list">
+                    <li><a class="facebook" href="#">
+                            <img class="social-img" src="./images/fb-small@.png" alt="">
+                        </a></li>
+                    <li><a class="twitter" href="#">
+                            <img class="social-img" src="./images/fb-small@.png" alt="">
+                        </a></li>
+                    <li><a class="linkedIn" href="#">
+                            <img class="social-img" src="./images/fb-small@.png" alt="">
+                        </a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+    <script src="./js/meme-service.js"></script>
+    <script src="./js/meme-controller.js"></script>
+    <!-- <script src="./js/main.js"></script> -->
+</body>
+</html>

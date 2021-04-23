@@ -56,8 +56,8 @@ header {
     /* grid-area: 2 / 1 / span 7 / span 7; */
     background-color: whitesmoke;
     margin: 0;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 footer {
@@ -108,6 +108,10 @@ header .logo {
 
 .btn-nav-menu {
     margin-right: 1rem;
+        height: 2.5rem;
+        width: 2.5rem;
+        border-radius: 0.4rem;
+        padding: 0.4rem;
 }
 
 body.menu-open .main-screen {
@@ -164,10 +168,11 @@ body.menu-open .main-nav {
 .images-wrapper {
     display: grid;
     max-width: 80vw;
-    /* grid-template-columns: repeat(4, 1fr); */
-    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    /* grid-template-columns: repeat(4, 150px); */
+    grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
+    /* grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); */
     grid-template-rows: repeat(2, 1fr);
-    gap: 5px;
+    gap: 8px;
     margin: 0 auto;
 }
 
@@ -182,16 +187,67 @@ body.menu-open .main-nav {
     border-radius: 0.2rem;
 }
 
+/* Editor Container */
+
 /* Canvas */
 
 .canvas-container {
     max-width: 100vw;
     /* background-color: yellowgreen; */
     /* height: 25%; */
+    padding-bottom: 0.5rem;
 }
 
 canvas {
     max-width: 100%;
+}
+
+/* Control panel */
+
+.controll-panel-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    /* grid-template-columns: repeat(5, 2.5rem); */
+    grid-template-rows: repeat(3, 1fr);
+    /* grid-template-rows: repeat(3, 2.5rem); */
+    /* margin: 0 auto; */
+    /* min-height: 100vh; */
+    /* width: 100vw; */
+}
+
+.text-box {
+    grid-area: 1 / 1 / span 1 / span 5;
+}
+.switch-line {
+    grid-area: 2 / 1 / 1 / 1;
+}
+.add-line {
+    grid-area: 2 / 2 / 1 / 1;
+}
+.remove-line {
+    grid-area: 2 / 3 / 1 / 1;
+}
+
+.line-up {
+    grid-area: 2 / 4 / 1 / 1;
+}
+
+.btn-editor {
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 0.5rem;
+    padding: 0.4rem;
+}
+
+.btn-editor .img {
+    height: 80%;
+    width: 80%;
+    /* padding: 0.2rem; */
+}
+
+.text-box {
+    height: 2.5rem;
+    border-radius: 0.5rem;
 }
 
 /* Footer */
@@ -244,6 +300,8 @@ canvas {
     } */
     .btn-nav-menu {
         display: none;
+        height: 2.5rem;
+        width: 2.5rem;
     }
     /* main {
         padding-top: 40px;
@@ -275,12 +333,19 @@ canvas {
         color: white;
     }
     .editor-container {
-        flex-direction: row;
+        /* display: flex;
+        flex-direction: column; */
+    }
+    .editor-container {
+        /* display: flex; */
     }
     canvas {
         max-width: 100%;
     }
-    /* .control-panel {
-        max-width: 40%;
-    } */
+    .control-panel {
+        /* background-color: aquamarine; */
+        /* display: flex;
+        flex-direction: row; */
+        /* max-width: 40%; */
+    }
 }

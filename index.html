@@ -19,7 +19,9 @@
                     <button class="btn-nav active" onclick="onShowGallery()">Gallery</button>
                     <button class="btn-nav" onclick="">About</button>
                 </div>
-                <button class="btn-nav-menu" onclick="toggleMenu()">☰</button>
+                <button class="btn-nav-menu" onclick="toggleMenu()">
+                    <img src="./images/btn-icons/line-menu.png" alt="">
+                </button>
             </div>
         </header>
         
@@ -54,15 +56,81 @@
                     <canvas id="my-canvas" height="400" width="400"></canvas>
                 </div>
     
+                <!-- <div class="control-panel-grid">
+                    <div  class="text-box">
+                        <label for="meme-text"></label>
+                        <input type="text" name="meme-text" placeholder="you'r text here" 
+                            oninput="onType(this.value)">
+                    </div>
+                    <div class="switch-line">
+                        <button class="btn-editor" onclick="onSwitchLine()">
+                            <img src="./images/btn-icons/up-down-arrows-icon@3x.png" alt="">
+                        </button>
+                    </div>
+                    <div class="add-line">
+                        <button class="btn-editor" onclick="onAddNewLine()">
+                            <img src="./images/btn-icons/add-line-icon@3x.png" alt="">
+                        </button>
+                    </div>
+                    
+                    <div class="remove-line">
+                        <button class="btn-editor" onclick="onRemoveLine()">
+                            <img src="./images/btn-icons/trash@3x.png" alt="">
+                        </button>
+                    </div>
+                    <div class="line-up">
+                        <button class="btn-editor" onclick="moveLineUp()">
+                            <img src="./images/btn-icons/arrow-up.png" alt="">
+                        </button>
+                    </div>
+                    <div class="line-down">
+                        <button class="btn-editor" onclick="moveLineDown()">
+                            <img src="./images/btn-icons/arraow-down.png" alt="">
+                        </button>
+                    </div>
+                    <div class="size-up">
+                        <button class="btn-editor" onclick="increaseTxtSize()">
+                            <img src="./images/btn-icons/increase-font-icon@3x.png" alt="">
+                        </button>
+                    </div>
+                    <div class="size-down">
+                        <button class="btn-editor" onclick="decreaseTxtSize()">
+                            <img src="./images/btn-icons/decrease-font-icon@3x.png" alt="">
+                        </button>
+                    </div>
+                    <div class="change-color">
+                        <button class="btn-editor" onclick="onChangecolor()">
+                            <img src="./images/btn-icons/color-text-icon@3x.png" alt="">
+                        </button>
+                    </div>
+                </div> -->
                 <div class="control-panel flex">
-                    <label for="meme-text"></label>
-                    <input type="text" name="meme-text" placeholder="you'r text here" oninput="onType(this.value)">
-                    <button class="font-size" onclick="increaseTxtSize()">+</button>
-                    <button class="font-size" onclick="decreaseTxtSize()">-</button>
-                    <button class="vert-align" onclick="moveLineUp()">⬆️</button>
-                    <button class="vert-align" onclick="moveLineDown()">⬇️</button>
-                    <button class="add-line" onclick="onAddNewLine()">➕</button>
-                    <button class="switch-line" onclick="onSwitchLine()">⇵</button>
+                    <div>
+
+                        <label for="meme-text"></label>
+                        <input class="text-box" type="text" name="meme-text" placeholder="you'r text here" oninput="onType(this.value)">
+                    </div>
+                    <button class="btn-editor" onclick="increaseTxtSize()">
+                        <img src="./images/btn-icons/increase-font-icon@3x.png" alt="">
+                    </button>
+                    <button class="btn-editor" onclick="decreaseTxtSize()">
+                        <img src="./images/btn-icons/decrease-font-icon@3x.png" alt="">
+                    </button>
+                    <button class="btn-editor" onclick="moveLineUp()">
+                        <img src="./images/btn-icons/arrow-up.png" alt="">
+                    </button>
+                    <button class="btn-editor" onclick="moveLineDown()">
+                        <img src="./images/btn-icons/arraow-down.png" alt="">
+                    </button>
+                    <button class="btn-editor" onclick="onAddNewLine()">
+                        <img src="./images/btn-icons/add-line-icon@3x.png" alt="">
+                    </button>
+                    <button class="btn-editor" onclick="onSwitchLine()">
+                        <img src="./images/btn-icons/up-down-arrows-icon@3x.png" alt="">
+                    </button>
+                    <button class="btn-editor" onclick="onChangecolor()">
+                        <img src="./images/btn-icons/color-text-icon@3x.png" alt="">
+                    </button>
                 </div>
             </div>
 

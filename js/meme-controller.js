@@ -2,8 +2,9 @@
 
 function onInit() {
     console.log('Let\'s meme!');
-    hideEditor()
-    showGallery()
+    onShowEditor()
+    // hideEditor()
+    // showGallery()
     gCanvas = document.querySelector('#my-canvas');
     gCtx = gCanvas.getContext('2d')
     renderMeme()

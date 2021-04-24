@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="./css/main.css">
     <title>Meme Gen</title>
 </head>
+
 <body onload="onInit()">
     <div class="main-screen" onclick="toggleMenu()"></div>
 
@@ -24,38 +26,18 @@
                 </button>
             </div>
         </header>
-        
+
         <main class="main-content">
 
             <div class="gallery-container">
-                <!-- <h2>Photo Gallery</h2> -->
-                <div class="images-wrapper grid">
-                    <div class="image-box"><img src="./images/1.jpg" alt="image1" id="1" onclick="onSelectImg(this.id)"></div>
-                    <div class="image-box"><img src="./images/2.jpg" alt="image2" id="2" onclick="onSelectImg(this.id)"></div>
-                    <div class="image-box"><img src="./images/3.jpg" alt="image1" id="3" onclick="onSelectImg(this.id)"></div>
-                    <div class="image-box"><img src="./images/4.jpg" alt="image2" id="4" onclick="onSelectImg(this.id)"></div>
-                    <div class="image-box"><img src="./images/5.jpg" alt="image1" id="5" onclick="onSelectImg(this.id)"></div>
-                    <div class="image-box"><img src="./images/6.jpg" alt="image2" id="6" onclick="onSelectImg(this.id)"></div>
-                    <div class="image-box"><img src="./images/7.jpg" alt="image1" id="7" onclick="onSelectImg(this.id)"></div>
-                    <div class="image-box"><img src="./images/8.jpg" alt="image2" id="8" onclick="onSelectImg(this.id)"></div>
-                    <div class="image-box"><img src="./images/9.jpg" alt="image1" id="9" onclick="onSelectImg(this.id)"></div>
-                    <div class="image-box"><img src="./images/10.jpg" alt="image2" id="10" onclick="onSelectImg(this.id)"></div>
-                    <div class="image-box"><img src="./images/11.jpg" alt="image1" id="11" onclick="onSelectImg(this.id)"></div>
-                    <div class="image-box"><img src="./images/12.jpg" alt="image2" id="12" onclick="onSelectImg(this.id)"></div>
-                    <div class="image-box"><img src="./images/13.jpg" alt="image2" id="13" onclick="onSelectImg(this.id)"></div>
-                    <div class="image-box"><img src="./images/14.jpg" alt="image1" id="14" onclick="onSelectImg(this.id)"></div>
-                    <div class="image-box"><img src="./images/15.jpg" alt="image2" id="15" onclick="onSelectImg(this.id)"></div>
-                    <div class="image-box"><img src="./images/16.jpg" alt="image2" id="16" onclick="onSelectImg(this.id)"></div>
-                    <div class="image-box"><img src="./images/17.jpg" alt="image1" id="17" onclick="onSelectImg(this.id)"></div>
-                    <div class="image-box"><img src="./images/18.jpg" alt="image1" id="18" onclick="onSelectImg(this.id)"></div>
-                </div>
+                <div class="imgs-wrapper grid"></div>
             </div>
 
             <div class="editor-container">
                 <div class="canvas-container">
                     <canvas id="my-canvas" height="400" width="400"></canvas>
                 </div>
-    
+
                 <!-- <div class="control-panel-grid">
                     <div  class="text-box">
                         <label for="meme-text"></label>
@@ -106,20 +88,19 @@
                 </div> -->
                 <div class="control-panel flex">
                     <div>
-
                         <label for="meme-text"></label>
-                        <input class="text-box" type="text" name="meme-text" placeholder="you'r text here" oninput="onType(this.value)">
+                        <input class="txt-box" type="text" name="meme-text" oninput="onType(this.value)">
                     </div>
-                    <button class="btn-editor" onclick="increaseTxtSize()">
+                    <button class="btn-editor" onclick="onIncreaseTxtSize()">
                         <img src="./images/btn-icons/increase-font-icon@3x.png" alt="">
                     </button>
-                    <button class="btn-editor" onclick="decreaseTxtSize()">
+                    <button class="btn-editor" onclick="onDecreaseTxtSize()">
                         <img src="./images/btn-icons/decrease-font-icon@3x.png" alt="">
                     </button>
-                    <button class="btn-editor" onclick="moveLineUp()">
+                    <button class="btn-editor" onclick="onMoveLineUp()">
                         <img src="./images/btn-icons/arrow-up.png" alt="">
                     </button>
-                    <button class="btn-editor" onclick="moveLineDown()">
+                    <button class="btn-editor" onclick="onMoveLineDown()">
                         <img src="./images/btn-icons/arraow-down.png" alt="">
                     </button>
                     <button class="btn-editor" onclick="onAddNewLine()">
@@ -128,12 +109,12 @@
                     <button class="btn-editor" onclick="onSwitchLine()">
                         <img src="./images/btn-icons/up-down-arrows-icon@3x.png" alt="">
                     </button>
-                    <button class="btn-editor" onclick="onChangecolor()">
-                        <img src="./images/btn-icons/color-text-icon@3x.png" alt="">
-                    </button>
+                        <label for="line-color">
+                            <!-- <img src="./images/btn-icons/color-text-icon@3x.png" alt=""> -->
+                            <input class="color" type="color" name="line-color" value="#00FF00" oninput="OnChangeLineColor(value)">
+                        </label>
                 </div>
             </div>
-
         </main>
 
 
@@ -157,6 +138,6 @@
     </div>
     <script src="./js/meme-service.js"></script>
     <script src="./js/meme-controller.js"></script>
-    <!-- <script src="./js/main.js"></script> -->
 </body>
+
 </html>

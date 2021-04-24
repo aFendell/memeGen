@@ -2,9 +2,8 @@
 
 function onInit() {
     console.log('Let\'s meme!');
-    onShowEditor()
-    // hideEditor()
-    // showGallery()
+    // onShowEditor()
+    onShowGallery()
     gCanvas = document.querySelector('#my-canvas');
     gCtx = gCanvas.getContext('2d')
     renderMeme()
@@ -66,6 +65,7 @@ function onSelectImg(id) {
 }
 
 function onShowEditor() {
+    if (document.body.classList.contains('menu-open')) toggleMenu()
     hideGallery()
     showEditor()
     renderMeme()
@@ -82,6 +82,7 @@ function showEditor() {
 }
 
 function onShowGallery() {
+    if (document.body.classList.contains('menu-open')) toggleMenu()
     hideEditor()
     showGallery()
 }
@@ -94,6 +95,12 @@ function hideEditor() {
 function showGallery() {
     var elGallery = document.querySelector('.gallery-container')
     elGallery.style.display = 'block'
+}
+
+function onAbout() {
+    if (document.body.classList.contains('menu-open')) toggleMenu()
+
+    // TODO: open about modal
 }
 
 function onAddNewLine() {

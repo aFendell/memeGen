@@ -249,7 +249,8 @@ input[type=text] {
     width: 19rem;
     margin-bottom: 0.5rem;
     border-radius: 0.5rem;
-    border: 2px solid rgb(111, 11, 192)
+    border: 2px solid rgb(111, 11, 192);
+    font-size: 1rem;
 }
 
 

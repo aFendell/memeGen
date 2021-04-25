@@ -91,28 +91,38 @@
                         <label for="meme-text"></label>
                         <input class="txt-box" type="text" name="meme-text" oninput="onType(this.value)">
                     </div>
-                    <button class="btn-editor" onclick="onIncreaseTxtSize()">
-                        <img src="./images/btn-icons/increase-font-icon@3x.png" alt="">
-                    </button>
-                    <button class="btn-editor" onclick="onDecreaseTxtSize()">
-                        <img src="./images/btn-icons/decrease-font-icon@3x.png" alt="">
-                    </button>
-                    <button class="btn-editor" onclick="onMoveLineUp()">
-                        <img src="./images/btn-icons/arrow-up.png" alt="">
-                    </button>
-                    <button class="btn-editor" onclick="onMoveLineDown()">
-                        <img src="./images/btn-icons/arraow-down.png" alt="">
-                    </button>
-                    <button class="btn-editor" onclick="onAddNewLine()">
-                        <img src="./images/btn-icons/add-line-icon@3x.png" alt="">
-                    </button>
-                    <button class="btn-editor" onclick="onSwitchLine()">
-                        <img src="./images/btn-icons/up-down-arrows-icon@3x.png" alt="">
-                    </button>
+                    <div class="control-1">
+                        <button class="btn-editor" onclick="onSwitchLine()">
+                            <img src="./images/btn-icons/up-down-arrows-icon@3x.png" alt="">
+                        </button>
+                        <button class="btn-editor" onclick="onAddNewLine()">
+                            <img src="./images/btn-icons/add-line-icon@3x.png" alt="">
+                        </button>
+                        <button class="btn-editor" onclick="onAddNewLine()">
+                            <img src="./images/btn-icons/trash@3x.png" alt="">
+                        </button>
+                    </div>
+                    <div class="control-2">
+
+                        <button class="btn-editor" onclick="onIncreaseTxtSize()">
+                            <img src="./images/btn-icons/increase-font-icon@3x.png" alt="">
+                        </button>
+                        <button class="btn-editor" onclick="onDecreaseTxtSize()">
+                            <img src="./images/btn-icons/decrease-font-icon@3x.png" alt="">
+                        </button>
+                        <button class="btn-editor" onclick="onMoveLineUp()">
+                            <img src="./images/btn-icons/arrow-up.png" alt="">
+                        </button>
+                        <button class="btn-editor" onclick="onMoveLineDown()">
+                            <img src="./images/btn-icons/arraow-down.png" alt="">
+                        </button>
+                        
+                        
                         <label for="line-color">
                             <!-- <img src="./images/btn-icons/color-text-icon@3x.png" alt=""> -->
                             <input class="color" type="color" name="line-color" value="#00FF00" oninput="OnChangeLineColor(value)">
                         </label>
+                    </div>
                 </div>
             </div>
         </main>

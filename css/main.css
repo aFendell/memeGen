@@ -360,11 +360,12 @@ input[type=color] {
 .social-nav img {
     /* list-style-type: none; */
     height: 2.5rem;
+    width: 2.5rem;
 }
 
-.fb {
-    border-radius: 0.5rem;
-}
+/* .fb {
+    border-radius: 0.75rem;
+} */
 
 /* Media queries */
 

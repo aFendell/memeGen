@@ -35,10 +35,12 @@ function drawText(currLine) {
 
     gCtx.textAlign = alignX
     gCtx.fillStyle = line.color
-    gCtx.lineWidth = 5
+    gCtx.strokeStyle = 'blue'
+    gCtx.lineWidth = 2
     gCtx.font = `${size}px Montserrat-Regular`
     gCtx.textBaseline = alignY
     gCtx.fillText(txt, x, y)
+    gCtx.strokeText(txt, x, y)
 }
 
 function renderMeme() {

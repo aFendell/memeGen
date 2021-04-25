@@ -355,6 +355,15 @@ input[type=color] {
 
 .social-nav li {
     list-style-type: none;
+    height: 2.5rem;
+}
+.social-nav img {
+    /* list-style-type: none; */
+    height: 2.5rem;
+}
+
+.fb {
+    border-radius: 0.5rem;
 }
 
 /* Media queries */
